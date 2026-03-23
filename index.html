@@ -1317,26 +1317,26 @@ Ndi tsoka liti mwa izi lomwe limakukhudzani?
 <p class="question_text question3">
 <label><strong>Lowetsani tsiku lanu lobadwa</strong></label><br>
 
-<select id="tsiku"></select>
-<select id="mwezi"></select>
-<select id="chaka"></select>
+<select id="day"></select>
+<select id="month"></select>
+<select id="year"></select>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Day
+  // Tsiku (Day)
   const daySelect = document.getElementById("day");
-  daySelect.innerHTML = "<option value=''>Day</option>";
+  daySelect.innerHTML = "<option value=''>Tsiku</option>";
   for (let i = 1; i <= 31; i++) {
     let option = new Option(i, i);
     daySelect.add(option);
   }
 
-  // Month
+  // Mwezi (Month)
   const monthSelect = document.getElementById("month");
   const months = [
-    "Month","January","February","March","April","May","June",
-    "July","August","September","October","November","December"
+    "Mwezi","Januwale","Febuluwale","Malichi","Epulo","Meyi","Juni",
+    "Julayi","Ogasiti","Seputembala","Okutobala","Novembala","Disembala"
   ];
 
   months.forEach((month, index) => {
@@ -1344,9 +1344,9 @@ document.addEventListener("DOMContentLoaded", function () {
     monthSelect.add(option);
   });
 
-  // Year
+  // Chaka (Year)
   const yearSelect = document.getElementById("year");
-  yearSelect.innerHTML = "<option value=''>Year</option>";
+  yearSelect.innerHTML = "<option value=''>Chaka</option>";
   const currentYear = new Date().getFullYear();
 
   for (let y = currentYear; y >= 1950; y--) {
